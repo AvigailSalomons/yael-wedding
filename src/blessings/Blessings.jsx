@@ -2,223 +2,54 @@ import React, { useState, useEffect } from 'react';
 import StringDisplay from '../stringDisplay/StringDisplay';
 import './Blessing.css';
 
-// הברכות שברשותך
 const BlessingData = [
     {
-        title: 'שולמית,',
-        content: 'נושמות איתך את ריח הפריחה,. רואות לבן מול העיניים,. שומעות גם מנגינה בשקט,. ובינתיים,. מתפללות עליך ועל כולנו,. לבית מהחלומות. ושהכל יהיה ממש - דבש.',
-        sender: 'אוהבות- - -',
+        title: 'יעלללל!!!',
+        content: 'מזל טוב ענקקק. מתרגשת איתך בלי סוף. שיהיה המון הצלחה וסייעתא דשמיא בבית החדש!. ושמחה, כמו שאת תמיד. יעל, אני אתגעגע :). אל תשכחי אותי גם אחרי זמן.  מזל טוב!! בנין עדי עד!! המון בריאות, ונחת. יואו יעל. פשוט הזוי שזה מתקרב ככה בצעדי ענק',
+        sender: 'יהודית'
     },
     {
-        title: 'שולמית,',
-        content: 'נושמות איתך את ריח הפריחה,. רואות לבן מול העיניים,. שומעות גם מנגינה בשקט,. ובינתיים,. מתפללות עליך ועל כולנו,. לבית מהחלומות. ושהכל יהיה ממש - דבש.',
-        sender: 'אוהבות- - -',
+        title: 'יעל',
+        content: '    ,. רואה אותך בלבן מול העיניים,. שומעת כבר את המנגינה. ובינתיים:,. מתפללת עליך ועל כולם,. לבית מהחלומות. ושהכל יהיה ממש - דבש.',
+        sender: 'אביגיל - - - -',
     },
     {
-        title: 'שולמית המהממת!',
-        content: ' מזל טוב!. שתזכו לבנות בית נאמן בישראל לתפארת!. מתוך נחת בריאות ושמחה🤎. שתצליחי בעבודה ובכל דבר שתעשי!. מעריכה ואוהבת מאד',
-        sender: 'רינה ורנר',
+        title: 'יעל מזל טוב',
+        content: '    ,. סופרת איתך ביחד את הימים.ומאחלת את כל הטוב שבעולמים!!!',
+        sender: 'אוהבת המון טובה-',
     },
     {
-        title: 'לשולמית המהממת!!',
-        content: 'בהתרגשות עצומה סופרים את הימים. וליום הענק כולנו מחכים!!. קובי ושולמית מתחתנים!. שתזכו לשפע ברכה והצלחה בכל הענינים. שכל החלומות בביתכם יתגשמו. שיהיו לכם חיים מאושרים וטובים ורק שמחות כל הימים!!',
-        sender: 'אוהבים מאד זאבי ,נחמי וכמובן חיה',
+        title: 'יעל',
+        content: ' מזל טוב ענק!.מחכה לחתונה!.בהצלחה בהכל .שיהיה לך סיעתא דשמיא גדולה.וגם בעבודה',
+        sender: 'מרות',
     },
     {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
-    },
-    {
-        title: '',
-        content: '',
-        sender: '',
+        title: 'יעלוש!!',
+        content: ' מזל טוב !.מחכה מאד מאד מאד לחתונה!.ומתרגשתתת .',
+        sender: ' משרלי הבת דודה האוהבת',
     },
     // ניתן להוסיף כאן עוד ברכות במידת הצורך
 ];
- 
-
-// פונקציה שתיצור מערך של ברכות לכל יום בין היום לבין תאריך החתונה
-const createBlessingArray = (startDate, endDate) => {
-    const totalDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
-    return Array(totalDays).fill('');
-};
 
 const Blessings = () => {
-    const [currentBlessing, setCurrentBlessing] = useState(null);
+    const [currentBlessing, setCurrentBlessing] = useState(BlessingData[0]);
 
     useEffect(() => {
-        const today = new Date();
-        const dayIndex = today.getDate() - 7; // Adjust index to match with BlessingData length
-        if (dayIndex >= 0 && dayIndex < BlessingData.length) {
-            if (BlessingData[dayIndex].title === '' && BlessingData[dayIndex].content === '' && BlessingData[dayIndex].sender === '') {
-                setCurrentBlessing(BlessingData[0]); // Display the first blessing if the current one is empty
-            } else {
-                setCurrentBlessing(BlessingData[dayIndex]);
-            }
-        }
+        const interval = setInterval(() => {
+            setCurrentBlessing(prevBlessing => {
+                const currentIndex = BlessingData.indexOf(prevBlessing);
+                const nextIndex = (currentIndex + 1) % BlessingData.length;
+                return BlessingData[nextIndex];
+            });
+        }, 10000); // 120,000 מילישניות = 2 דקות
+
+        return () => clearInterval(interval); // נקה את ה־interval כשהקומפוננטה נעלמת
     }, []);
 
     return (
         <div className="blessingContainer">
             {currentBlessing && (
                 <>
-              
                     <div id="title"><StringDisplay longString={currentBlessing.title} /></div>
                     <div id="content"><StringDisplay longString={currentBlessing.content} /></div>
                     <div id="sender"><StringDisplay longString={currentBlessing.sender} /></div>
